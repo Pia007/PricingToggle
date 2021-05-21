@@ -26,7 +26,7 @@
   content: '';
   position: absolute;
   top: 3.5px;
-  left: 5px;
+  right: 5px;
   width: 30px;
   height: 30px;
   border-radius: 45px;
@@ -36,8 +36,8 @@
 }
 
 .checkbox:checked + .toggle-label::after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
+  right: calc(100% - 5px);
+  transform: translateX(100%);
   /* background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%)); */
   
 }
