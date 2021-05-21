@@ -52,7 +52,7 @@ Next, I will attempt to use ReactJS to re-create this project.
 
 ## Author
 
-- Website - [Pia Torain](https://www.your-site.com)
+- Website - [Pia007](https://www.your-site.com)
 - Frontend Mentor - [@pia007](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@FeenixRizn](https://www.twitter.com/yourusername)
 
