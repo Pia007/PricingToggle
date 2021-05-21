@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
+/* Setting Variables */
 :root {
     --montserrat: 'Montserrat', sans-serif;
-    --fs-reg: .9375rem;
+    
+    --fs-xsm: .5625rem;
     --fs-sm: .8125rem;
+    --fs-reg: .9375rem;
+    --fs-xl: 2.25rem;
+    --fs-xxl: 4rem;
 
     --vl-grayish-blue: hsl(240, 78%, 98%);
     --lt-grayish-blue: hsl(234, 14%, 74%);
@@ -15,8 +20,11 @@
     --lin-grad-bt: linear-gradient(to bottom, hsl(236, 72%, 79%) 3%, hsl(237, 63%, 60%));
     --lin-grad-brt: linear-gradient(to bottom right, hsl(236, 72%, 79%) 1%, hsl(237, 63%, 64%)); 
     --shadow: hsl(235, 27%, 81%);
-}
 
+    --b-rad: .5rem;
+    --bb-rad: .3125rem;
+}
+ /* Global Styling */
 *,
 *::before,
 *::after {
@@ -42,11 +50,15 @@ body {
     text-align: center;
     position: relative;
 }
+
+/* Aligning the toggle with its labels */
 .toggle-now,
 .toggle-later {
     display: inline-block;
     vertical-align: middle;
 }
+
+/* Styling the container */
 .container {
     position: fixed;
     height: 100%;
@@ -54,10 +66,8 @@ body {
     margin: 2rem auto;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%);  
 }
-
 .title,
 .terms {
     margin: 3rem auto;
@@ -95,42 +105,36 @@ span {
 .dollar {
     display: inline-block;
     vertical-align: middle;
-    font-size: 2.25rem;
+    font-size: var(--fs-xl);
     padding-bottom: .5rem;
     padding-right: .5rem;
 }
 .price-monthly,
 .price-annually {
-    font-size: 4rem;
+    font-size: var(--fs-xxl);
     margin: 0;
     padding: 2.5rem auto;
 }
-.hidden {
-    display: none;
-}
-
 .basic {
-    border-radius: 8px 0 0 8px;
+    border-radius: var(--b-rad) 0 0 var(--b-rad);
     background: var(--white);
     box-shadow: -1px 3px 10px 2px var(--shadow);
 }
 .master {
-    border-radius: 0 8px 8px 0;
+    border-radius: 0 var(--b-rad) var(--b-rad) 0;
     background: var(--white);
     border: 1px solid var(--vl-grayish-blue);
     box-shadow: -1px 3px 10px 2px  var(--shadow);
 }
-
-
 button {
     color: hsl(237, 63%, 64%);
     background: var(--white);
     width: 100%;
     height: 2.5rem;
-    font-weight: 600;
+    font-weight: var(--fw-xl);
     margin-top: 1rem;
     border: 1px solid var(--grayish-blue);
-    border-radius: 5px;
+    border-radius: var(--bb-rad);
     cursor: pointer;
 }
 button:hover {
@@ -140,7 +144,7 @@ button:hover {
 .professional {
     color: white;
     background: var(--lin-grad-bt);  
-    border-radius: 8px;
+    border-radius: var(--b-rad);
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     box-shadow: -1px 3px 10px 2px  var(--shadow);
@@ -150,15 +154,21 @@ button:hover {
     background: var(--lin-grad-bt);
     border: 1px solid var(--white); 
 }
-.bp2 {
-    color: var(--white);
-    background:var(--lin-grad-brt); 
-    border: 1px solid var(--grayish-blue); 
-}
+
 .bp:hover {
     color:hsl(237, 59%, 65%);
     background: var(--white); 
     border: 1px solid var(--white); 
+}
+
+/* Styling that activates on click */
+.hidden {
+    display: none;
+}
+.bp2 {
+    color: var(--white);
+    background:var(--lin-grad-brt); 
+    border: 1px solid var(--grayish-blue); 
 }
 .bp2:hover {
     color: hsl(237, 59%, 65%);
@@ -166,3 +176,72 @@ button:hover {
     border: 1px solid var(--grayish-blue); 
 }
 
+footer {
+    background-color:hsla(0, 11%, 76%, 0.637);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1.5rem;
+    font-size: var(--font-sm);
+    text-align: center;   
+}
+.attribution {
+    color: var(--black);
+    font-size: .875em;
+    letter-spacing: .0625rem;
+    margin: 0;
+}
+.attribution a {
+    color: var(--blue-at);
+}
+
+/* max width  768px*/
+@media screen and (max-width: 48em) {
+    .container {
+        position: absolute;
+        max-width: 30rem;
+        height: 100%;
+        margin: 3rem auto;
+    }
+    .columns {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .pricing  {
+        max-width: 100%;
+        margin: 1rem;   
+    }
+    .basic,
+    .master {
+        border-radius: 8px;
+    } 
+    footer {
+        height: 1rem;
+    }
+    .attribution {
+        font-size: var(--fs-xsm);
+        letter-spacing: .0625rem;
+    }
+}
+
+/* max width  600px*/
+@media screen and (max-width: 37.5em) {
+    .container {
+        max-width: 25rem;  
+    }
+}
+/* max width  450px*/
+@media screen and (max-width: 28.125em) {
+    .container {
+        max-width: 20rem;  
+    }
+}
+
+/* max width  375px*/
+@media screen and (max-width: 23.4375em) {
+    .container {
+        max-width: 15rem;  
+    }
+}

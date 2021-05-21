@@ -10,7 +10,7 @@ const basicButton = document.getElementById("b");
 const profButton = document.getElementById("p");
 const masButton = document.getElementById("m");
 
-
+// Toggle starts in default (Monthly) position. When clicked, the following changes will occur:
 switchToggle.addEventListener("click", () =>{
     if(switchToggle.checked) {
         colorToggle.style.backgroundColor = "#9397E6";    
@@ -31,9 +31,6 @@ switchToggle.addEventListener("click", () =>{
         profMonthly.classList.remove('hidden');
         masAnnually.classList.add('hidden');
         masMonthly.classList.remove('hidden');
-        // basicButton.classList.remove('bp2');
-        // profButton.classList.add('bp');
-        // masButton.classList.remove('bp2');
     }   
 });
 
