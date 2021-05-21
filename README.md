@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Pia007/PricingToggle)
-- Live Site URL: [Add live site URL here](https://pia007.github.io/PricingToggle/)
+- Solution URL: [Solution URL here](https://github.com/Pia007/PricingToggle)
+- Live Site URL: [Live site URL here](https://pia007.github.io/PricingToggle/)
 
 ## My process
 
