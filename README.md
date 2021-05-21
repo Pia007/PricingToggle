@@ -26,11 +26,6 @@ Users should be able to:
 - Control the toggle with both their mouse/trackpad and their keyboard
 - **Bonus**: Complete the challenge with just HTML and CSS
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/Pia007/PricingToggle)
