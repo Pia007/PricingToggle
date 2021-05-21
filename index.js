@@ -1,28 +1,42 @@
-const termAnnual = document.getElementById("term-annually");
-const termMonthly = document.getElementById("term-monthly");
-const hitToggle = document.getElementById("toggle");
-const priceBasic = document.getElementById("bas");
-const priceProfessional = document.getElementById("prof");
-const priceMaster = document.getElementById("mast");
+const switchToggle = document.getElementById("toggle");
+const colorToggle = document.getElementById("t-label");
+const basicMonthly = document.getElementById("bs-monthly");
+const basicAnnually = document.getElementById("bs-yearly");
+const profMonthly = document.getElementById("pf-monthly");
+const profAnnually = document.getElementById("pf-yearly");
+const masMonthly = document.getElementById("ms-monthly");
+const masAnnually = document.getElementById("ms-yearly");
 const basicButton = document.getElementById("b");
 const profButton = document.getElementById("p");
-const mastButton = document.getElementById("m");
+const masButton = document.getElementById("m");
 
 
-console.log(priceBasic);
-console.log(priceMaster);
-console.log(termAnnual);
+switchToggle.addEventListener("click", () =>{
+    if(switchToggle.checked) {
+        colorToggle.style.backgroundColor = "#9397E6";    
+        basicAnnually.classList.remove('hidden');
+        basicMonthly.classList.add('hidden');
+        profAnnually.classList.remove('hidden');
+        profMonthly.classList.add('hidden');
+        masAnnually.classList.remove('hidden');
+        masMonthly.classList.add('hidden');
+        basicButton.classList.add('bp2');
+        profButton.classList.remove('bp');
+        masButton.classList.add('bp2');   
 
-
-hitToggle.addEventListener("click", () =>{
-    // hitToggle.checked = true;
-    priceBasic.innerHTML = "$199.99";
-    priceProfessional.innerHTML = "$249.99";
-    priceMaster.innerHTML = "$399.99";
-    basicButton.classList.add('bp');
-    mastButton.classList.add('bp');
-    profButton.classList.add('change');
+    }else {
+        basicAnnually.classList.add('hidden');
+        basicMonthly.classList.remove('hidden');
+        profAnnually.classList.add('hidden');
+        profMonthly.classList.remove('hidden');
+        masAnnually.classList.add('hidden');
+        masMonthly.classList.remove('hidden');
+        // basicButton.classList.remove('bp2');
+        // profButton.classList.add('bp');
+        // masButton.classList.remove('bp2');
+    }   
 });
+
 
 
 

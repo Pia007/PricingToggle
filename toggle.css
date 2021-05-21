@@ -1,20 +1,10 @@
-/* .toggle-label {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-} */
-  
 .toggle-label {
   position : relative ;
   display : inline-block;
-  /* display: flex;
-  align-items: center;
-  justify-content: space-between; */
   cursor: pointer;
   width: 75px;
   height: 37.5px;
-  background: hsl(236, 72%, 79%);
-  /* background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%)); */
+  background: hsl(236, 72%, 83%); 
   border-radius: 100px;
   position: relative;
   transition: background-color .2s;
@@ -37,15 +27,14 @@
 
 .checkbox:checked + .toggle-label::after {
   right: calc(100% - 5px);
-  transform: translateX(100%);
-  /* background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%)); */
-  
+  transform: translateX(100%); 
 }
 
-/* .toggle-label:active  {
-  width: 30px;
+
+.toggle-label:hover  {
+  background: linear-gradient(to bottom right, hsl(236, 72%, 79%) 35%, hsl(237, 63%, 64%)); 
   
-} */
+}
 .checkbox {
   display: none;
 }

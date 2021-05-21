@@ -11,7 +11,10 @@
     --dk-grayish-blue: hsl(232, 13%, 33%);
     --white: hsl(255, 100%, 100%);
 
-    -fw-xl: 700;
+    --fw-xl: 700;
+    --lin-grad-bt: linear-gradient(to bottom, hsl(236, 72%, 79%) 3%, hsl(237, 63%, 60%));
+    --lin-grad-brt: linear-gradient(to bottom right, hsl(236, 72%, 79%) 1%, hsl(237, 63%, 64%)); 
+    --shadow: hsl(235, 27%, 81%);
 }
 
 *,
@@ -28,14 +31,12 @@ height: 100%;
 }
 body {
     font-family: var(--montserrat);
+    font-weight: var(--fw-xl);
     color: var(--dk-grayish-blue);
-    /* color: var(--lt-grayish-blue); */
-    /* background-image:url('./images/bg-top.svg'); */
-    /* height: auto;
-    width: auto; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    background: hsl(240, 21%, 91%);
+    background-color: var(--vl-grayish-blue);
+    background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+    background-position: 100% 0, 0 100%;
+    background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -54,8 +55,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* display: flex; */
-    /* flex-direction: column; */
+    
 }
 
 .title,
@@ -66,8 +66,6 @@ body {
     color: var(--lt-grayish-blue);
     align-items: center;
 }
-
-
 .columns {
     height: auto;
     width: auto;
@@ -76,7 +74,6 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* border: 1px solid black;    */
 }
 .tier {
     margin-top: 1px;
@@ -89,9 +86,11 @@ p {
     color: var(--dk-grayish-blue); 
     width: 100%;
     height: 90%;
-    /* margin: 2rem; */
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
     text-align: center; 
+}
+span {
+    display: inline-block;
 }
 .dollar {
     display: inline-block;
@@ -100,49 +99,70 @@ p {
     padding-bottom: .5rem;
     padding-right: .5rem;
 }
-.price-monthly {
+.price-monthly,
+.price-annually {
     font-size: 4rem;
     margin: 0;
     padding: 2.5rem auto;
-    /* margin: 1rem; */
+}
+.hidden {
+    display: none;
 }
 
 .basic {
     border-radius: 8px 0 0 8px;
     background: var(--white);
-    /* border: 1px solid black; */
+    box-shadow: -1px 3px 10px 2px var(--shadow);
 }
 .master {
     border-radius: 0 8px 8px 0;
     background: var(--white);
-    /* border: 1px solid black; */
+    border: 1px solid var(--vl-grayish-blue);
+    box-shadow: -1px 3px 10px 2px  var(--shadow);
 }
+
+
 button {
     color: hsl(237, 63%, 64%);
     background: var(--white);
-    /* background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%)); */
     width: 100%;
     height: 2.5rem;
     font-weight: 600;
     margin-top: 1rem;
     border: 1px solid var(--grayish-blue);
     border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    color: var(--white);
+    background: linear-gradient(to right, hsl(236, 72%, 79%) 35%, hsl(237, 63%, 64%)); 
 }
 .professional {
     color: white;
-    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));  
+    background: var(--lin-grad-bt);  
     border-radius: 8px;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+    box-shadow: -1px 3px 10px 2px  var(--shadow);
 }
 .bp {
     color: var(--white);
-    /* background: var(--white); */
-    background: hsl(237, 59%, 65%); 
+    background: var(--lin-grad-bt);
     border: 1px solid var(--white); 
 }
-.change {
-    color: hsl(237, 63%, 64%);
-    background: var(--white);
+.bp2 {
+    color: var(--white);
+    background:var(--lin-grad-brt); 
+    border: 1px solid var(--grayish-blue); 
+}
+.bp:hover {
+    color:hsl(237, 59%, 65%);
+    background: var(--white); 
     border: 1px solid var(--white); 
 }
+.bp2:hover {
+    color: hsl(237, 59%, 65%);
+    background: var(--white); 
+    border: 1px solid var(--grayish-blue); 
+}
+
