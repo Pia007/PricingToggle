@@ -1,172 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
-:root {
-    --montserrat: 'Montserrat', sans-serif;
-    --fs-reg: .9375rem;
-    --fs-sm: .8125rem;
-
-    --vl-grayish-blue: hsl(240, 78%, 98%);
-    --lt-grayish-blue: hsl(234, 14%, 74%);
-    --grayish-blue: hsl(233, 13%, 49%);
-    --dk-grayish-blue: hsl(232, 13%, 33%);
-    --white: hsl(255, 100%, 100%);
-
-    --fw-xl: 700;
-    --lin-grad-bt: linear-gradient(to bottom, hsl(236, 72%, 79%) 3%, hsl(237, 63%, 60%));
-    --lin-grad-brt: linear-gradient(to bottom right, hsl(236, 72%, 79%) 1%, hsl(237, 63%, 64%)); 
-    --shadow: hsl(235, 27%, 81%);
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-html {
-position: relative;
-}
-html,
-body {
-height: 100%;
-}
-body {
-    font-family: var(--montserrat);
-    font-weight: var(--fw-xl);
-    color: var(--dk-grayish-blue);
-    background-color: var(--vl-grayish-blue);
-    background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
-    background-position: 100% 0, 0 100%;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-}
-.toggle-now,
-.toggle-later {
-    display: inline-block;
-    vertical-align: middle;
-}
-.container {
-    position: fixed;
-    height: 100%;
-    width: 65rem;
-    margin: 2rem auto;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-.title,
-.terms {
-    margin: 3rem auto;
-}
-.terms  { 
-    color: var(--lt-grayish-blue);
-    align-items: center;
-}
-.columns {
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.tier {
-    margin-top: 1px;
-}
-p {
-    border-bottom: 1px solid var(--lt-grayish-blue);
-    padding-bottom: 1rem;
-}
-.pricing {
-    color: var(--dk-grayish-blue); 
-    width: 100%;
-    height: 90%;
-    padding: 2rem 1.5rem;
-    text-align: center; 
-}
-span {
-    display: inline-block;
-}
-.dollar {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 2.25rem;
-    padding-bottom: .5rem;
-    padding-right: .5rem;
-}
-.price-monthly,
-.price-annually {
-    font-size: 4rem;
-    margin: 0;
-    padding: 2.5rem auto;
-}
-.hidden {
-    display: none;
-}
-
-.basic {
-    border-radius: 8px 0 0 8px;
-    background: var(--white);
-    box-shadow: -1px 3px 10px 2px var(--shadow);
-}
-.master {
-    border-radius: 0 8px 8px 0;
-    background: var(--white);
-    border: 1px solid var(--vl-grayish-blue);
-    box-shadow: -1px 3px 10px 2px  var(--shadow);
-}
-
-
-button {
-    color: hsl(237, 63%, 64%);
-    background: var(--white);
-    width: 100%;
-    height: 2.5rem;
-    font-weight: 600;
-    margin-top: 1rem;
-    border: 1px solid var(--grayish-blue);
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    color: var(--white);
-    background: linear-gradient(to right, hsl(236, 72%, 79%) 35%, hsl(237, 63%, 64%)); 
-}
-.professional {
-    color: white;
-    background: var(--lin-grad-bt);  
-    border-radius: 8px;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    box-shadow: -1px 3px 10px 2px  var(--shadow);
-}
-.bp {
-    color: var(--white);
-    background: var(--lin-grad-bt);
-    border: 1px solid var(--white); 
-}
-.bp2 {
-    color: var(--white);
-    background:var(--lin-grad-brt); 
-    border: 1px solid var(--grayish-blue); 
-}
-.bp:hover {
-    color:hsl(237, 59%, 65%);
-    background: var(--white); 
-    border: 1px solid var(--white); 
-}
-.bp2:hover {
-    color: hsl(237, 59%, 65%);
-    background: var(--white); 
-    border: 1px solid var(--grayish-blue); 
-}
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
 /* Setting Variables */
 :root {
     --montserrat: 'Montserrat', sans-serif;
@@ -174,8 +7,10 @@ button:hover {
     --fs-xsm: .5625rem;
     --fs-sm: .8125rem;
     --fs-reg: .9375rem;
+    --fs-big: 1.75rem;
     --fs-xl: 2.25rem;
-    --fs-xxl: 4rem;
+    --fs-xxl: 3rem;
+    --fs-xxxl: 4rem;
 
     --vl-grayish-blue: hsl(240, 78%, 98%);
     --lt-grayish-blue: hsl(234, 14%, 74%);
@@ -278,7 +113,7 @@ span {
 }
 .price-monthly,
 .price-annually {
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-xxxl);
     margin: 0;
     padding: 2.5rem auto;
 }
@@ -409,6 +244,25 @@ footer {
 /* max width  375px*/
 @media screen and (max-width: 23.4375em) {
     .container {
+        max-width: 17rem;  
+    }
+}
+
+/* max width 320px*/
+@media screen and (max-width: 20em) {
+    .container {
         max-width: 15rem;  
+    }
+    .terms  { 
+        font-size: var(--fs-sm);
+    }
+    .price-monthly,
+    .price-annually {
+        font-size: var(--fs-xxl);
+        margin: 0;
+        padding: 2.5rem auto;
+    }
+    .dollar {
+        font-size: var(--fs-big);
     }
 }
