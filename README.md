@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-I am continue to learn HTML, CSS and JS. In this challenged I had worked on manipulating the DOM. 
+I'm continuing to learn HTML, CSS and JS. In this challenge, I had worked on manipulating the DOM. 
 
 ### Continued development
 
