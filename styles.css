@@ -363,8 +363,8 @@ footer {
     color: var(--blue-at);
 }
 
-/* max width  768px*/
-@media screen and (max-width: 48em) {
+/* max width  1050px*/
+@media screen and (max-width: 65.625em) {
     .container {
         position: absolute;
         max-width: 30rem;
