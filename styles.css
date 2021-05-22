@@ -7,8 +7,10 @@
     --fs-xsm: .5625rem;
     --fs-sm: .8125rem;
     --fs-reg: .9375rem;
+    --fs-big: 1.75rem;
     --fs-xl: 2.25rem;
-    --fs-xxl: 4rem;
+    --fs-xxl: 3rem;
+    --fs-xxxl: 4rem;
 
     --vl-grayish-blue: hsl(240, 78%, 98%);
     --lt-grayish-blue: hsl(234, 14%, 74%);
@@ -111,7 +113,7 @@ span {
 }
 .price-monthly,
 .price-annually {
-    font-size: var(--fs-xxl);
+    font-size: var(--fs-xxxl);
     margin: 0;
     padding: 2.5rem auto;
 }
@@ -242,6 +244,25 @@ footer {
 /* max width  375px*/
 @media screen and (max-width: 23.4375em) {
     .container {
+        max-width: 17rem;  
+    }
+}
+
+/* max width 320px*/
+@media screen and (max-width: 20em) {
+    .container {
         max-width: 15rem;  
+    }
+    .terms  { 
+        font-size: var(--fs-sm);
+    }
+    .price-monthly,
+    .price-annually {
+        font-size: var(--fs-xxl);
+        margin: 0;
+        padding: 2.5rem auto;
+    }
+    .dollar {
+        font-size: var(--fs-big);
     }
 }
