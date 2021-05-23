@@ -258,7 +258,7 @@ footer {
     }
     .price-monthly,
     .price-annually {
-        font-size: var(--fs-xxl);
+        font-size: var(--fs-xl);
         margin: 0;
         padding: 2.5rem auto;
     }
