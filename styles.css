@@ -246,23 +246,23 @@ footer {
     .container {
         max-width: 17rem;  
     }
-}
-
-/* max width 320px*/
-@media screen and (max-width: 20em) {
-    .container {
-        max-width: 17rem;  
-    }
     .terms  { 
         font-size: var(--fs-sm);
     }
     .price-monthly,
     .price-annually {
-        font-size: var(--fs-xl);
+        font-size: var(--fs-xxl);
         margin: 0;
-        padding: 2rem auto;
+        padding: 2.5rem auto;
     }
     .dollar {
         font-size: var(--fs-big);
+    }
+}
+
+/* max width 320px*/
+@media screen and (max-width: 20em) {
+    .container {
+        max-width: 15rem;  
     }
 }
