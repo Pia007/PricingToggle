@@ -251,7 +251,7 @@ footer {
 /* max width 320px*/
 @media screen and (max-width: 20em) {
     .container {
-        max-width: 16rem;  
+        max-width: 17rem;  
     }
     .terms  { 
         font-size: var(--fs-sm);
