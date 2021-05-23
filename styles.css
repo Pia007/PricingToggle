@@ -260,7 +260,7 @@ footer {
     .price-annually {
         font-size: var(--fs-xl);
         margin: 0;
-        padding: 2.5rem auto;
+        padding: 2rem auto;
     }
     .dollar {
         font-size: var(--fs-big);
